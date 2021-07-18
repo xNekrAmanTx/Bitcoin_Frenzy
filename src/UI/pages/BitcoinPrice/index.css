@@ -1,0 +1,5 @@
+.btc-change-button-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

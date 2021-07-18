@@ -1,0 +1,7 @@
+.wallet-buttons-container{
+    height: 5rem;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
