@@ -4,7 +4,7 @@ import { usdBalanceReducer } from './usd/usdBalanceReducer';
 import { bitcoinBalanceReducer } from './btc/btcBalanceReducer';
 import { historyReducer } from './history/historyReducer';
 
-const rootState = {
+export const rootState = {
     priceInfo: priceReducer,
     bitCoinBalance: bitcoinBalanceReducer,
     usdBalance: usdBalanceReducer,

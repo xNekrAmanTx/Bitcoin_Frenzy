@@ -1,8 +1,8 @@
 import { Route, Switch } from 'react-router-dom';
-import { routes } from '../../../constants/routes';
-import Header from '../Layout/Header';
-import NavBar from '../Layout/NavBar';
-import HistoryBar from '../Layout/HistoryBar';
+import { routes } from '../../constants/routes';
+import Header from './Header';
+import NavBar from './NavBar';
+import HistoryBar from './HistoryBar';
 
 const Layout = () => {
     return (

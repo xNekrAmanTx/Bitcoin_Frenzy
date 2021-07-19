@@ -1,4 +1,4 @@
-import { navConstants } from '../../../../constants/navConstants'
+import { navConstants } from '../../../constants/navConstants'
 import ListItem from '../../ListItem';
 
 const Navbar = () => {
@@ -6,9 +6,7 @@ const Navbar = () => {
         <aside className='nav-bar white-on-blue'>
             <ul className='nav-list'>
                 {navConstants.map(({text, path}, i) => (
-                    <ListItem /* isActive={(match) => {
-                        if(!match) return !i
-                    }} */ key={i} text={text} path={path} />
+                    <ListItem key={i} text={text} path={path} />
                 ))}
             </ul>
         </aside>

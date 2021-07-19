@@ -1,10 +1,9 @@
-import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { formatMoney } from '../../../helpers/formatMoney';
-import { buyBTC } from '../../../state management/btc/btcBalanceActions';
-import { priceSelector } from '../../../state management/price/priceSelector';
-import { updateUSDBalance } from '../../../state management/usd/usdBalanceActions';
-import { usdBalanceSelector } from '../../../state management/usd/usdBalanceSelector';
+import { formatMoney } from '../../helpers/formatMoney';
+import { buyBTC } from '../../state management/btc/btcBalanceActions';
+import { priceSelector } from '../../state management/price/priceSelector';
+import { updateUSDBalance } from '../../state management/usd/usdBalanceActions';
+import { usdBalanceSelector } from '../../state management/usd/usdBalanceSelector';
 import Button from '../../components/Button';
 
 
@@ -15,7 +14,6 @@ const BuyBitcoin = () => {
     const price = useSelector(priceSelector);
 
     const handleBuyClick = () => {
-        // btcBalance ? (dispatch(updateUSDBalance(price)), dispatch(sellBTC)) : alert('You haven\'t got any Bitcoins');
         if (usdBalance >= price) {
             dispatch(updateUSDBalance(-price));
             dispatch(buyBTC);
@@ -26,7 +24,7 @@ const BuyBitcoin = () => {
     return (
         <div className='main-content_container'>
             <span> {'Bitcoin price is ' + formatMoney(price) + '$'}</span>
-            <span>
+            <span className='centered-text'>
                 {price < 10000
                     ?
                     'Prices are low, buy more!'

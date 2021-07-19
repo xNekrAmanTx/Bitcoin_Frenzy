@@ -1,13 +1,12 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { btcBalanceSelector } from '../../../../state management/btc/btcBalanceSelector';
-import { priceSelector } from '../../../../state management/price/priceSelector';
-import { usdBalanceSelector } from '../../../../state management/usd/usdBalanceSelector';
-import BTCLOGO from '../../../../assets/images/bitcoin.svg'
-import { formatMoney } from '../../../../helpers/formatMoney';
+import { useSelector } from 'react-redux';
+import { btcBalanceSelector } from '../../../state management/btc/btcBalanceSelector';
+import { priceSelector } from '../../../state management/price/priceSelector';
+import { usdBalanceSelector } from '../../../state management/usd/usdBalanceSelector';
+import BTCLOGO from '../../../assets/images/bitcoin.svg'
+import { formatMoney } from '../../../helpers/formatMoney';
 
 const Header = () => {
 
-    const dispatch = useDispatch();
     const price = useSelector(priceSelector);
     const usdBalance = useSelector(usdBalanceSelector);
     const btcBalance = useSelector(btcBalanceSelector);
@@ -15,8 +14,8 @@ const Header = () => {
     return (
         <header className='white-on-blue'>
             <div className="left-header align-center">
-                <span className="logo-container">
-                    <object className='btc-logo' data={BTCLOGO} />
+                <span className="btc-logo-container">
+                    <img className='btc-logo-container__logo' src={BTCLOGO} alt="B" />
                 </span>
                 <span className="proj-name">BITCOIN FRENZY</span>
             </div>
@@ -25,8 +24,6 @@ const Header = () => {
                 <div>{formatMoney(usdBalance) + ' $'}</div>
                 <div>{formatMoney(btcBalance) + ' BITCOINS'}</div>
             </div>
-
-
         </header>
     );
 };

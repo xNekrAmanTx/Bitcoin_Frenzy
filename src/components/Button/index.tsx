@@ -1,8 +1,6 @@
-import React from 'react';
-
 type propsType = {
     onClick: () => void
-    children: string /* | HTMLElement */
+    children: string
 };
 
 const Button = ({ onClick, children }: propsType) => {

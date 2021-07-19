@@ -1,6 +1,6 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { formatDate } from '../../../../helpers/formatDate';
-import { historySelector } from '../../../../state management/history/historySelector';
+import { useSelector } from 'react-redux';
+import { formatDate } from '../../../helpers/formatDate';
+import { historySelector } from '../../../state management/history/historySelector';
 
 const HistoryBar = () => {
 

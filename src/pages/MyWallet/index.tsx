@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { increaseUSDBalance, decreaseUSDBalance } from '../../../state management/usd/usdBalanceActions';
-import { btcBalanceSelector } from '../../../state management/btc/btcBalanceSelector';
-import { usdBalanceSelector } from '../../../state management/usd/usdBalanceSelector';
+import { increaseUSDBalance, decreaseUSDBalance } from '../../state management/usd/usdBalanceActions';
+import { btcBalanceSelector } from '../../state management/btc/btcBalanceSelector';
+import { usdBalanceSelector } from '../../state management/usd/usdBalanceSelector';
 import './index.css';
 import Button from '../../components/Button';
 
